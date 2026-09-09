@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Wayfarer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="brand">Wayfarer</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <div class="search-group">
+        <input type="text" id="search-input" placeholder="Search beach, temple, country...">
+        <button id="search-btn">Search</button>
+        <button id="clear-btn">Clear</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Wayfarer</h1>
+    <p class="tagline">Independent travel recommendations, curated by a small team.</p>
+
+    <div class="info-block">
+      <h3>Who we are</h3>
+      <p>
+        Wayfarer started as a shared document of places three friends kept
+        recommending to each other. We turned it into a small site so
+        anyone could browse beaches, temples, and countries worth visiting
+        without wading through ads and sponsored posts.
+      </p>
+    </div>
+
+    <div class="info-block">
+      <h3>Guidance for team members</h3>
+      <p>
+        If you're adding a new destination: confirm the name and country
+        spelling, write a two-sentence description in plain language (no
+        marketing fluff), and use a landscape-orientation image at least
+        800px wide. Tag every entry with exactly one category — beach,
+        temple, or country — so search stays accurate. Open a pull request
+        instead of committing directly to main.
+      </p>
+    </div>
+
+    <div id="results"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+:root {
+  --ink: #14302e;
+  --sand: #f6f1e7;
+  --teal: #1f5c56;
+  --coral: #e0714a;
+  --line: #d9d0bd;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--sand);
+  color: var(--ink);
+  font-family: "Georgia", "Iowan Old Style", serif;
+  line-height: 1.55;
+}
+
+header {
+  background: var(--teal);
+  color: var(--sand);
+  padding: 1.1rem 1.5rem;
+}
+
+.brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.75rem 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: var(--sand);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav a:hover, nav a:focus-visible {
+  border-bottom-color: var(--coral);
+}
+
+.search-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+#search-input {
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 160px;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  border-radius: 3px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#search-btn { background: var(--coral); color: white; }
+#clear-btn { background: transparent; color: var(--sand); border: 1px solid var(--sand); }
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--teal);
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+#results {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.9rem;
+  background: white;
+}
+
+.card img {
+  width: 130px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.card h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card .category {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  color: var(--teal);
+}
+
+.empty-note {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #7a7062;
+  font-size: 0.95rem;
+}
+
+.info-block {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+form.contact-form {
+  display: grid;
+  gap: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form.contact-form label {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form.contact-form button {
+  background: var(--teal);
+  color: white;
+  width: fit-content;
+}
+
+@media (max-width: 480px) {
+  .card { grid-template-columns: 1fr; }
+  .card img { width: 100%; height: 160px; }
+  .search-group { margin-left: 0; width: 100%; }
+  #search-input { flex: 1; }
+}
